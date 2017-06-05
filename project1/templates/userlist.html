@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<p>用户列表</p>
+<table border="1" cellspacing="0">
+    <tr><td>ID</td><td>用户名</td><td>口令</td><td>注册时间</td><td>最近登陆时间</td></tr>
+{% for name in user_list %}
+    <tr><td>{{ name.id }}</td><td>{{ name.username }}</td><td>{{ name.password }}</td><td>{{ name.regist_time }}</td><td>{{ name.latest_time }}</td></tr>
+
+ <br>
+ {% endfor %}
+</table>
+
+</body>
+</html>
